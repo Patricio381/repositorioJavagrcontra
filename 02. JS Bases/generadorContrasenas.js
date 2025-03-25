@@ -1,40 +1,64 @@
 function checkLongitud(longitud) {
-  /* TU CODIGO */
+  //  TU CODIGO 
+
+if (!longitud) return "Debe ingresar la longitud";
+if (typeof longitud !== "string") return "La longitud recibida no es válida";
+if (longitud < 3) return "La longitud debe ser mayor o igual a 3";
+if (longitud > 10) return "La longitud debe ser menor o igual a 10";
+return longitud
+
+
 
 }
 
 function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
   /* TU CODIGO */
-  var letras = null;
 
-  var numeros = null;
 
-  var especiales = null;
+  var letras = "abcdefghijklmnopqrstuvwxyz";
 
-  var letrasMayusculas = null
+  var numeros = "0123456789";
 
-  var caracteresDisponibles = null;
+  var especiales = "!@#$%^&*()_+{}[]|:;<>,.?/~";
 
-  if () {
-      
+  var letrasMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+  var caracteresDisponibles = letras;
+
+
+  if (incluirEspeciales) {
+    caracteresDisponibles += especiales;
+  }
+  if (incluirNumeros) {
+    caracteresDisponibles += numeros;
+  }
+  if (incluirMayusculas) {
+    caracteresDisponibles += letrasMayusculas;
   }
 
-  if () {
-      
+  var contrasena = "";
+
+  if (longitud >= 3) {
+  
+    var indiceAleatorio =Math.floor(Math.random() * caracteresDisponibles.length )
+    var caracterAletorio = caracteresDisponibles (indiceAleatorio)
+    contrasena = caracteresDisponibles + caracterAletorio
+
+    var indiceAleatorio =Math.floor(Math.random() * caracteresDisponibles.length )
+    var caracterAletorio = caracteresDisponibles (indiceAleatorio)
+    contrasena = caracteresDisponibles + caracterAletorio
+   
+    var indiceAleatorio =Math.floor(Math.random() * caracteresDisponibles.length )
+    var caracterAletorio = caracteresDisponibles (indiceAleatorio)
+    contrasena = caracteresDisponibles + caracterAletorio
   }
 
-  if () {
-      
 
-  }
 
-  var contrasena = null;
 
-  if () {
 
-  }
-
-  return null;
+  
+  return "Contraseña generada: " + contrasena;
 }
 
 // <------- NO TOCAR -------->

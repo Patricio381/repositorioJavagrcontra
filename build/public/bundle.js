@@ -5,9 +5,61 @@
 /*!***********************************************!*\
   !*** ../02. JS Bases/generadorContrasenas.js ***!
   \***********************************************/
-/***/ (() => {
+/***/ ((module) => {
 
-throw new Error("Module parse failed: Unexpected token (18:6)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n|   var caracteresDisponibles = null;\n| \n>   if () {\n|       \n|   }");
+function checkLongitud(longitud) {
+  /* TU CODIGO */
+return longitud >= 7;
+}
+
+function generarContrasena(longitud, incluirEspeciales, incluirNumeros, incluirMayusculas ) {
+  /* TU CODIGO */
+  if (!checkLongitud(longitud)) {
+    return "La longitud debe ser mayor o igual a 7";
+  }
+
+
+  var letras = "abcdefghijklmnopqrstuvwxyz";
+
+  var numeros = "0123456789";
+
+  var especiales = "!@#$%^&*()_+{}[]|:;<>,.?/~";
+
+  var letrasMayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+  var caracteresDisponibles = letras;
+
+
+  if (incluirEspeciales) {
+    caracteresDisponibles += especiales;
+  }
+  if (incluirNumeros) {
+    caracteresDisponibles += numeros;
+  }
+  if (incluirMayusculas) {
+    caracteresDisponibles += letrasMayusculas;
+  }
+
+  var contrasena = "";
+
+
+  for (let i = 0; i < longitud; i++) {
+    var indiceAleatorio = Math.floor(Math.random() * caracteresDisponibles.length);
+    contrasena += caracteresDisponibles[indiceAleatorio];
+  }
+
+  return "Contraseña generada: " + contrasena;
+}
+
+
+
+
+// <------- NO TOCAR -------->
+module.exports = {
+  checkLongitud,
+  generarContrasena,
+};
+
 
 /***/ }),
 
