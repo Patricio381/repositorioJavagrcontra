@@ -1,9 +1,14 @@
 // <------- Arreglo de actividades sospechozas -----> modificar el valor de ser necesario
-var actividadesSospechozas = null
+var actividadesSospechozas = []
 
 function agregarActividad(descripcion, nivelRiesgo){
     /* TU CODIGO */
-    
+   
+    if (!descripcion || !nivelRiesgo ) return "Descripcion o nivel de riesgo no valido"
+
+
+
+
 }
 
 function eliminarActividad(indice){

@@ -1,0 +1,61 @@
+/* Reset básico para eliminar estilos predeterminados del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Evitar problemas con fuentes y tamaños */
+  html {
+    font-size: 100%;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Estilos base para el body */
+  body {
+    font-family: sans-serif;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Quitar la decoración de enlaces */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Listas sin estilos por defecto */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Botones sin estilos predeterminados */
+  button, input, select, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+  }
+  
+  /* Evitar que imágenes sobrepasen su contenedor */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Asegurar que las tablas sean más manejables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Asegurar que elementos multimedia responsivos */
+  video, iframe {
+    max-width: 100%;
+    height: auto;
+  }
+  
